@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080d1b">
+  <meta name="description" content="FRIDAY AI 5.0 - Free-first smart assistant">
+  <title>FRIDAY AI 5.0</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="/" aria-label="FRIDAY AI home">
+        <span class="brand-mark">F</span>
+        <span><b>FRIDAY AI</b><small>VERSION 5.0</small></span>
+      </a>
+      <button class="new-chat" id="newChat">＋ New chat</button>
+      <p class="nav-label">WORKSPACE</p>
+      <nav class="nav">
+        <button class="nav-item active" data-mode="chat">◉ <span>AI Chat</span></button>
+        <button class="nav-item" data-mode="search">⌕ <span>Smart Search</span></button>
+        <button class="nav-item" data-mode="research">◎ <span>Deep Research</span></button>
+        <button class="nav-item" data-mode="code">⌘ <span>Coding assistant</span></button>
+        <button class="nav-item" data-mode="learn">▤ <span>Learning</span></button>
+        <button class="nav-item" data-mode="write">✎ <span>Writing</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="free-pill"><i></i> Free-first edition</div>
+        <button class="nav-item" id="languageBtn">文 <span>தமிழ் / English</span></button>
+        <p class="side-note">Provider limits may apply. No paid API is required for search.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-button mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+        <div><b id="modeTitle">AI Chat</b><small>Personal intelligence workspace</small></div>
+        <span class="online"><i></i> READY</span>
+      </header>
+
+      <section class="welcome" id="welcome">
+        <div class="orb"><span>F</span></div>
+        <p class="eyebrow">YOUR PERSONAL AI ASSISTANT</p>
+        <h1>What can I help you <em>discover?</em></h1>
+        <p class="welcome-copy">Ask questions, explore the web, write, learn, and build.</p>
+        <div class="suggestions">
+          <button data-prompt="Explain artificial intelligence in simple terms">✦ Explain AI simply</button>
+          <button data-prompt="Search the web for the latest technology news">⌕ Find latest technology news</button>
+          <button data-prompt="Help me build a responsive website with HTML and CSS">⌘ Build a website</button>
+          <button data-prompt="Teach me an interesting science topic in Tamil">文 Learn in Tamil</button>
+        </div>
+      </section>
+
+      <section class="conversation" id="conversation" aria-live="polite"></section>
+
+      <section class="composer-wrap">
+        <div class="tools-row">
+          <label><input type="checkbox" id="webSearch"> <span>⌕ Web search</span></label>
+          <label><input type="checkbox" id="deepSearch"> <span>◎ Deep research</span></label>
+          <span id="languageLabel">English</span>
+        </div>
+        <div class="composer">
+          <textarea id="userInput" rows="1" placeholder="Message FRIDAY AI..." aria-label="Message FRIDAY AI"></textarea>
+          <button id="micBtn" class="icon-button" title="Voice input" aria-label="Voice input">🎙</button>
+          <button id="sendBtn" class="send-button" aria-label="Send message">➤</button>
+        </div>
+        <div class="composer-foot"><span id="status">Ready when you are.</span><span>FRIDAY AI 5.0 · Verify important information</span></div>
+      </section>
+    </main>
+  </div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
